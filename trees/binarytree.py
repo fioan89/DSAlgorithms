@@ -51,12 +51,18 @@ class Node:
 
 
 class BinarySearchTree:
-    def __init__(self):
+    def __init__(self, nodes=None):
+        """
+        :param nodes: a list of tuples where the first value is the key and the second is the payload associated to the key
+        """
         self.__root = None
         self.__size = 0
+        if nodes is not None:
+            for key, value in nodes:
+                self.put(key, value)
 
     def __len__(self):
-        self.__size
+        return self.__size
 
     def put(self, key, val):
         """
