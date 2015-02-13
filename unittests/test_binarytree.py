@@ -51,6 +51,11 @@ class TestBinaryTree(unittest.TestCase):
         nodes = self.binary_tree.subnodes(5, 9)
         self.assertEqual(NODES_IN_FIRST_SEARCH, len(nodes))
 
+    def test_second_search(self):
+        # I should compare the key/value of nodes and their order but I'm too lazy at this hour so I'll just test the length
+        nodes = self.binary_tree.subnodes(5, 10)
+        self.assertEqual(NODES_IN_SECOND_SEARCH, len(nodes))
+
     def test_third_search(self):
         # I should compare the key/value of nodes and their order but I'm too lazy at this hour so I'll just test the length
         nodes = self.binary_tree.subnodes(1)
