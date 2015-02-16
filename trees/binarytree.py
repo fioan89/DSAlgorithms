@@ -50,7 +50,7 @@ class Node:
         return "({0}:{1})".format(self.__key, self.__value)
 
 
-class BinarySearchTree:
+class BinarySearchTree(dict):
     def __init__(self, nodes=None):
         """
         :param nodes: a list of tuples where the first value is the key and the second is the payload associated to the key
